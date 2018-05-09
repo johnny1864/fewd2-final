@@ -28,6 +28,15 @@
     opacity: 0.8;
 }
 
+.gallery{
+    padding-bottom: 50px;
+}
+
+.gallery img{
+    height: 350px;
+    
+}
+
 footer {
     padding-top: 5px;
     text-align: center;
