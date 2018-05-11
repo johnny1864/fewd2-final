@@ -55,6 +55,16 @@ footer {
     margin: 0 auto;
 }
 
+#delivery-clip-art{
+    display: block;
+    width: 15em;
+    margin: 0 auto;
+}
+
+#inputOther{
+    visibility: hidden
+}
+
 
 
 
