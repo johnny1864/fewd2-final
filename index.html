@@ -11,6 +11,8 @@
 
 <body>
     <div class='container'>
+       
+       <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Pizza Ninjas</a>
 
@@ -21,6 +23,7 @@
             </div>
         </nav>
 
+       <!-- PAGE CONTENT -->
         <div class="jumbotron text-center">
             <div id="jumbo-h1" class='text-secondary text-center'>
                 <h1>Pizza Ninjas</h1>
@@ -36,6 +39,7 @@
     </div>
 
    <!-- MODAL -->
+   
     <div id="my-modal">
         <div id="modal-content">
            <span id="close">+</span>
@@ -71,7 +75,7 @@
                         </div>
                         <div id="inputOther" class='col-md-6 offset-2'>
                             <label for="inputOther">Other</label>
-                            <input type="text" class="form-control">
+                            <input id="other" type="text" class="form-control">
                         </div>
                     </div>
             
@@ -94,7 +98,7 @@
                             <input type="text" class="form-control" id="inputZip">
                         </div>
                     </div>
-                    <a type="submit" class="btn btn-info">Order</a>
+                    <a id="submit-address" type="submit" class="btn btn-danger">Order</a>
                     <div><span>* required</span></div>
                 </fieldset>
             </form>
