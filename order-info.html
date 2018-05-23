@@ -33,8 +33,8 @@
     <main>
         <h1 class="text-center text-secondary">Build Your Order</h1>
 
-        <div class="card text-white bg-primary mb-3 " id='order-card'>
-            <div class="card-header">Header</div>
+        <div class="card text-white bg-primary mb-3" id='order-card'>
+            <div class="card-header">Customize Order</div>
             <div class="card-body bg-secondary">
                 <div class="order-items">
                     <!-- CRUST  -->
@@ -49,18 +49,16 @@
                     </div>
                     
                     <!-- SIZE -->
-                    <div id="size-items">
-                   
-                        <label for="sizes">Size</label>
+                    <div id="order-item">
+                        <label class="text-danger" for="sizes">Size</label>
                         <select name="sizes" id="sizes">
-                            
+                            <option value="">Select</option>
                         </select>
-             
-
                     </div>
                     
+                    <!-- CHEESE -->
                     <div class="order-item">
-                        <label for="cheese">Cheese</label>
+                        <label class="text-danger" for="cheese">Cheese</label>
                         <select name="cheese" id="cheeses">
                             <option value="light">Light</option>
                             <option value="normal">Normal</option>
@@ -68,6 +66,20 @@
                             <option value="double">Double: +$3.99</option>
                         </select>
                     </div>
+                    
+                    <!-- SAUCE -->
+                    <div class="order-item">
+                        <label for="sauce" class="text-danger">Sauce</label>
+                        <select name="sauce" id="sauce">
+                            <option value="regular">Regular</option>
+                            <option value="hearty">Hearty</option>
+                            <option value="bbq">BBQ Sauce</option>
+                        </select>
+                    </div>
+                    
+                    <!-- TOPPINGS -->
+                    
+                    
                 </div>
             </div>
         </div>
