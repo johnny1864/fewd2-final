@@ -108,6 +108,26 @@ footer {
 /*********************
     ORDER-INFO PAGE
 *********************/
+#order-page{
+    background-color: #ccc;
+}
+
+#order-info{
+    height: 80px;
+}
+
+#order-page main{
+    padding-left: 250px
+}
+
+#order-card{
+    width: 600px
+}
+
+.order-items{
+    display: flex;
+    justify-content: space-around;
+}
 .side-panel{
     width: 250px;
     height: 100%;
@@ -118,9 +138,7 @@ footer {
    
 }
 
-#order-info{
-    height: 80px;
-}
+
 
 
 

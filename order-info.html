@@ -9,25 +9,69 @@
     <script src="js/order.js"></script>
 </head>
 
-<body>
-   <div class="side-panel bg-danger">
+<body id="order-page">
+    <div class="side-panel bg-danger">
         <h3 class="heading bg-primary">Order Info</h3>
-       <div id="order-info">
-           <h3>Amount:</h3>
-           <h4>$<span id="amount"> </span></h4>
-       </div>
-       
-       <h3 class="heading bg-primary">Address</h3>
-       <div class="address">
-           <ul>
-               <li id="street"> </li>
-               <li id="other"> </li>
-               <li id="city"> </li>
-               <li id="state"> </li>
-               <li id="zip-code"> </li>
-           </ul>
-       </div>
-   </div>
-   
+        <div id="order-info">
+            <h3>Order Amount:</h3>
+            <h4>$ <span id="amount"> </span></h4>
+        </div>
+
+        <h3 class="heading bg-primary">Address</h3>
+        <div class="address">
+            <ul>
+                <li id="street"> </li>
+                <li id="other"> </li>
+                <li id="city"> </li>
+                <li id="state"> </li>
+                <li id="zip-code"> </li>
+            </ul>
+            <a class="btn btn-info" href="#">Change</a>
+        </div>
+    </div>
+
+    <main>
+        <h1 class="text-center text-secondary">Build Your Order</h1>
+
+        <div class="card text-white bg-primary mb-3 " id='order-card'>
+            <div class="card-header">Header</div>
+            <div class="card-body bg-secondary">
+                <div class="order-items">
+                    <!-- CRUST  -->
+                    <div class="order-item">
+                        <label class="text-danger" for="crust">Crust</label>
+                        <select name="crust" id="crust">
+                             <option value="hand-tossed">Hand Tossed</option>
+                             <option value="thin-crust">Thin Crust</option>
+                             <option value="new-york-style">New York Style</option>
+                             <option value="Gluten Free">Gluten Free</option>
+                         </select>              
+                    </div>
+                    
+                    <!-- SIZE -->
+                    <div id="size-items">
+                   
+                        <label for="sizes">Size</label>
+                        <select name="sizes" id="sizes">
+                            
+                        </select>
+             
+
+                    </div>
+                    
+                    <div class="order-item">
+                        <label for="cheese">Cheese</label>
+                        <select name="cheese" id="cheeses">
+                            <option value="light">Light</option>
+                            <option value="normal">Normal</option>
+                            <option value="extra">Extra: +$2.99</option>
+                            <option value="double">Double: +$3.99</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

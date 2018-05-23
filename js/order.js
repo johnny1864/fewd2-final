@@ -38,12 +38,11 @@ function displayAddress(address) {
     }
 }
 
-function displayAmount(amount){
+function displayAmount(amount) {
     'use strict';
     //console.log('displayAmount');
-    
-    if(amount === 0){
-        $('amount')
+
+    if (amount === 0) {
+        $('amount').innerText = '0.00'
     }
 }
-
