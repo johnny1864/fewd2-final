@@ -1,3 +1,14 @@
+/**************
+    LAYOUT
+**************/
+body{
+    overflow-x: hidden;
+}
+
+ul li{
+    list-style: none;
+}
+
 .jumbotron {
     background-image: url(../images/vegetables-italian-pizza.jpg);
     background-repeat: no-repeat;
@@ -92,6 +103,25 @@ footer {
 #inputOther{
     visibility: hidden
 }
+
+
+/*********************
+    ORDER-INFO PAGE
+*********************/
+.side-panel{
+    width: 250px;
+    height: 100%;
+    position: absolute
+}
+
+.heading{
+   
+}
+
+#order-info{
+    height: 80px;
+}
+
 
 
 

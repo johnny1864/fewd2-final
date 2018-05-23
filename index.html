@@ -10,18 +10,20 @@
 </head>
 
 <body>
-    <div class='container'>
+    <div >
        
        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Pizza Ninjas</a>
-
-            <div class="collapse navbar-collapse" id="navbarColor03">
-                <ul class="navbar-nav mr-auto">
-
-                </ul>
-            </div>
-        </nav>
+        <div >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Pizza Ninjas</a>
+            
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav mr-auto">
+            
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
        <!-- PAGE CONTENT -->
         <div class="jumbotron text-center">
@@ -33,8 +35,8 @@
         </div>
 
         <div class="gallery row justify-content-around">
-            <img src="images/pizza_box.jpeg" alt="Pizza in boxes">
             <img src="images/pizza1.jpeg" alt="Pizza in slices">
+            <img src="images/pizza_box.jpeg" alt="Pizza in boxes">
         </div>
     </div>
 
@@ -46,12 +48,12 @@
             <div>
                 <img id="delivery-clip-art" src="images/pizza-delivery.jpg" alt="pizza delivery clip art">
             </div>
-            <form id="info-form">
+            <form id="info-form" >
                 <fieldset>
                     <legend>Enter Delivery Information</legend>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Name*</label>
+                            <label for="inputName">Name*</label>
                             <input type="text" class="form-control" id="inputName" placeholder="Name">
                         </div>
                         <div class="form-group col-md-6">
@@ -98,7 +100,7 @@
                             <input type="text" class="form-control" id="inputZip">
                         </div>
                     </div>
-                    <a id="submit-address" type="submit" class="btn btn-danger">Order</a>
+                    <a id="submit-address" type="submit" class="btn btn-danger" href="order-info.html">Order</a>
                     <div><span>* required</span></div>
                 </fieldset>
             </form>
@@ -107,6 +109,9 @@
 
     <footer class="footer bg-danger text-secondary">
         <p>&copy; 2018 Pizza Ninjas (555) 555-5555</p>
+        <ul class="social-media">
+            
+        </ul>
     </footer>
 </body>
 </html>
