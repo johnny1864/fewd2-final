@@ -12,8 +12,9 @@ window.addEventListener('load', function () {
     function main() {
         var amount = 0;
         var address = getAddress();
+        
         displayAddress(address);
-        displayAmount(amount);
+        getAmount(amount);
         
         
         
@@ -31,6 +32,11 @@ function getAddress() {
 function displayAddress(address) {
     'use strict';
     //console.log(address);
+    
+    if(!address){
+        $('street').innerText = 'No Address Entered';
+        return false;
+    }
     $('street').innerText = address[4];
     $('city').innerText = address[5];
     $('state').innerText = address[6];
@@ -41,7 +47,8 @@ function displayAddress(address) {
     }
 }
 
-function displayAmount(amount) {
+//
+function getAmount(amount) {
     'use strict';
     
     if (amount === 0) {
@@ -49,6 +56,8 @@ function displayAmount(amount) {
     }
 }
 
+
+//VALIDATES FORM TO CHECK IF INPUT FIELDS ARE EMPTY
 function validation(inputs){
      var valid = true;
     for (var i = 0; i < inputs[0].length; i++) {

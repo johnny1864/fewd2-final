@@ -140,10 +140,19 @@ footer {
     font-size: 1.5em
 }
 
+.card-body{
+    border-radius: 10px;
+}
+
 .side-panel{
     width: 250px;
     height: 100%;
     position: absolute
+}
+
+.address{
+    height: 100px;
+    width: 100%;
 }
 
 .order-item label{
