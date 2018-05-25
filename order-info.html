@@ -33,8 +33,9 @@
     <main>
         <h1 class="text-center text-secondary">Build Your Order</h1>
 
+       <!-- ORDER CARD -->
         <div class="card text-white bg-primary mb-3" id='order-card'>
-            <div class="card-header">Customize Order</div>
+            <div class="card-header text-center">Customize Order</div>
             <div class="card-body bg-secondary">
                 <div class="order-items">
                     <!-- CRUST  -->
@@ -49,7 +50,7 @@
                     </div>
                     
                     <!-- SIZE -->
-                    <div id="order-item">
+                    <div class="order-item">
                         <label class="text-danger" for="sizes">Size</label>
                         <select name="sizes" id="sizes">
                             <option value="">Select</option>
@@ -78,7 +79,43 @@
                     </div>
                     
                     <!-- TOPPINGS -->
-                    
+                    <fieldset id="toppings" class='text-danger'>
+                       <legend >Choose Your Topping ($1 each)</legend>
+                        <div class="checkbox-group">
+                            <input type="checkbox" value='pepperoni'>
+                            <label for="pepperoni">Pepperoni</label>
+                            
+                            <input type="checkbox" value='sausage'>
+                            <label for="sausage">Sausage</label>
+                            
+                            <input type="checkbox" value='ham'>
+                            <label for="ham">Ham</label>
+                            
+                            <input type="checkbox" value='bacon'>
+                            <label for="bacon">Bacon</label>
+                            
+                            <input type="checkbox" value='salami'>
+                            <label for="Salami">Salami</label>
+                            
+                            <input type="checkbox" value='peppers'>
+                            <label for="peppers">Peppers</label>
+                            
+                            <input type="checkbox" value='olives'>
+                            <label for="olives">Olives</label>
+                            
+                            <input type="checkbox" value='jalapenos'>
+                            <label for="jalapenos">Jalapenos</label>
+                            
+                            <input type="checkbox" value='mushrooms'>
+                            <label for="mushrooms">Mushrooms</label>
+                            
+                            <input type="checkbox" value='pineapple'>
+                            <label for="pineapple">Pineapple</label>
+                            
+                            <input type="checkbox" value="onion">
+                            <label for="onion">Onion</label>
+                        </div>
+                    </fieldset>
                     
                 </div>
             </div>

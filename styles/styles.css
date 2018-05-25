@@ -121,22 +121,49 @@ footer {
 }
 
 #order-card{
-    width: 600px
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-.order-items{
-    display: flex;
-    justify-content: space-around;
+#toppings{
+    display: block;
 }
+
+.order-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header{
+    font-weight: bold;
+    font-size: 1.5em
+}
+
 .side-panel{
     width: 250px;
     height: 100%;
     position: absolute
 }
 
-.heading{
-   
+.order-item label{
+    margin: 10px 0 0 0;
 }
+
+.checkbox-group label{
+    padding-right: 15px
+}
+
+.checkbox-group input{
+    cursor: pointer;
+}
+
+#toppings legend{
+    padding: 5px 0;
+    font-size: 1.5em;  
+}
+
+
 
 
 

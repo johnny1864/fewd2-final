@@ -14,6 +14,9 @@ window.addEventListener('load', function () {
         var address = getAddress();
         displayAddress(address);
         displayAmount(amount);
+        
+        
+        
     }
 
     main();
@@ -40,9 +43,22 @@ function displayAddress(address) {
 
 function displayAmount(amount) {
     'use strict';
-    //console.log('displayAmount');
-
+    
     if (amount === 0) {
         $('amount').innerText = '0.00'
     }
+}
+
+function validation(inputs){
+     var valid = true;
+    for (var i = 0; i < inputs[0].length; i++) {
+        if (inputs[0][i].value === '' && inputs[0][i].id !== 'other') {
+            //console.log(inputs[i]); 
+            inputs[0][i].style.border = '1px solid red';
+            valid = false;
+        } else {
+            inputs[0][i].style.border = 'none';
+        }
+    }
+    return valid;
 }
