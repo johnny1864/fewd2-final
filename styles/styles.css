@@ -120,7 +120,7 @@ footer {
     padding-left: 250px
 }
 
-#order-card{
+.order-card{
     width: 600px;
     margin: 0 auto;
     border-radius: 10px;
