@@ -142,8 +142,32 @@
         <div class="card bg-primary mb-3 order-card">
             <div class="card-header text-center text-secondary">Billing Information</div>
             <div class="card-body bg-secondary text-danger">
-                <h4 class="card-title">Secondary card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="card-title">Billing Address</h4>
+                <form id='billing'>
+                    <div id="address-info">
+                        
+                    </div>
+                    
+                    <h4 class="card-title">Card Information</h4>
+                    <div id="card-info">
+                        <div class="billing-item">
+                            <label for="credit">Credit Card Number</label>
+                            <input type="text" id="credit">
+                        </div>
+
+                        <div class="billing-item">
+                            <label for="ex-date">Expiration Date</label>
+                            <input type="text" id="ex-date">
+                        </div>
+
+                        <div class="billing-item">
+                            <label for="cvc-code">CVC Code</label>
+                            <input type="text" id="cvc-code">
+                        </div>
+
+
+                    </div>
+                </form>
             </div>
         </div>
     </main>

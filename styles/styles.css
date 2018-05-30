@@ -130,7 +130,7 @@ footer {
     display: block;
 }
 
-.order-item{
+.order-item, .billing-item{
     display: flex;
     flex-direction: column;
 }
@@ -178,9 +178,10 @@ footer {
 }
 
 input[type='radio']{
-    margin-
     cursor: pointer;
 }
+
+
 
 
 
