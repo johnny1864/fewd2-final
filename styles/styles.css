@@ -3,57 +3,39 @@
 **************/
 body{
     overflow-x: hidden;
+    background: url('../images/vegetables-italian-pizza.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul li{
     list-style: none;
 }
 
-.jumbotron {
-    background-image: url(../images/vegetables-italian-pizza.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-left: 0;
-    padding-right: 0;
-    height: 400px;
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.jumbotron h1 {
+#content h1 {
     width: 100%;
-    font-size: 4em;
+    font-size: 8em;
     opacity: 1;
     padding: 5px;
     margin-bottom: 2em;
-}
-
-#jumbo-h1 {
+    font-weight: bold;
     background-color: rgba(217, 131, 31, 0.8);
 }
 
-.jumbotron p a{
+#content p a{
     margin: 1em;
 }
 
-.jumbotron p a:hover{
+#content p a:hover{
     opacity: 0.8;
-}
-
-.gallery{
-    padding-bottom: 50px;
-}
-
-.gallery img{
-    height: 350px;
-    
-}
-
-footer {
-    padding-top: 5px;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 
@@ -155,7 +137,7 @@ footer {
     width: 100%;
 }
 
-.order-item label{
+.order-item label, .bill-card label{
     margin: 10px 0 0 0;
 }
 
@@ -181,14 +163,16 @@ input[type='radio']{
     cursor: pointer;
 }
 
+.billing-item .row{
+    margin: 0;
+    margin-bottom: 1em;
+}
 
 
 
 
 
-
-
-
+ 
 
 
 

@@ -102,9 +102,7 @@ function displayAddress(address) {
 function calcAmount() {
     'use strict';
     var amount = 0;
-//    console.log(16.99 + 0.99);
-//    console.log((+$('sizes').value) + getToppings(), 16.99 + 0.99);
-    
+ 
     amount = (+$('sizes').value) + (+$('cheese').value) + (+$('sauce').value) + getToppings();
     
     //console.log( 'the total is ' + amount);

@@ -33,18 +33,37 @@ window.addEventListener('load', function () {
 
 
     $('submit-address').addEventListener('click', function (e) {
+    
         var inputs = document.querySelectorAll('#info-form');
+        var address = getAddress(inputs);
+        
+        console.log(address);
+        
         if (!validation(inputs)) {
-            e.preventDefault()
+            e.preventDefault();
         } else {
-            storeAddress(inputs)
+            var confirm = window.confirm('Your Adress is ' + address);
+            if (confirm){
+                storeAddress(inputs);
+            }else{
+                e.preventDefault();
+            }  
         }
     });
 });
 
+function getAddress(inputs){
+    'use strict';
+    var address = [];
+    for (var i = 2; i < inputs[0].length; i++){
+        address[i] = inputs[0][i].value;
+    }
+    
+    return address.join(' ');
+}
+
 //VALIDATES ADDRESS INPUTS 
 function validation(inputs) {
-
     var valid = true;
     for (var i = 0; i < inputs[0].length; i++) {
         if (inputs[0][i].value === '' && inputs[0][i].id !== 'other') {
@@ -52,7 +71,7 @@ function validation(inputs) {
             inputs[0][i].style.border = '1px solid red';
             valid = false;
         } else {
-            inputs[0][i].style.border = 'none';
+            inputs[0][i].style.border = '1px solid #ccc';
         }
     }
     return valid;
