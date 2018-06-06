@@ -136,14 +136,11 @@
                         </fieldset>
 
                     </div>
-                    
-                     <a href="#" class='btn btn-danger' id='submit-billing'>Continue</a>
                 </form>
             </div>
         </div>
 
-       <!-- BILLING CARD -->
-        <div class="card bg-primary mb-3 order-card bill-card">
+        <div class="card bg-primary mb-3 order-card">
             <div class="card-header text-center text-secondary">Billing Information</div>
             <div class="card-body bg-secondary text-danger">
                 <h4 class="card-title">Billing Address</h4>
@@ -155,30 +152,24 @@
                     <h4 class="card-title">Card Information</h4>
                     <div id="card-info">
                         <div class="billing-item">
-                            <label for="credit">Credit Card Number</label>
-                            <input type="text" id="credit">
+                            <label for="credit">Credit Card Number <span id="cardNumber-error"> </span> <span id="type"> </span></label>
+                            <input type="text" id="credit" >
                         </div>
 
-                        <div class="row">
-                            <div class="billing-item col-6">
-                                <label for="ex-date">Expiration Date <span>Invalid Date</span></label>
-                                <div class="row">
-                                    <select class="col-5" name="month" id="month">
-                                        <option value="">Month</option>
-                                    </select>
-                                    <select class="col-5" name="year" id="year">
-                                        <option value="">Year</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="billing-item col-6">
-                                <label for="cvc-code">CVC Code</label>
-                                <input type="text" id="cvc-code">
-                            </div>
+                        <div class="billing-item">
+                            <label for="ex-date">Expiration Date <span id="date-error"> </span></label>
+                            <input type="text" id="ex-date" placeholder="mm/yy">
                         </div>
-                        <a href="#" class='btn btn-danger' id='submit-billing'>Place Order</a>
-                    </div>    
+
+                        <div class="billing-item">
+                            <label for="cvc-code">CVC Code <span id="date-error"> </span></label>
+                            <input type="text" id="cvc-code">
+                        </div>
+                        <div class='text-center'>
+                            <a href="#" class='btn btn-danger' id='submit-order'>Place Order</a>
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
         </div>

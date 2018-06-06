@@ -71,7 +71,7 @@ function validation(inputs) {
             inputs[0][i].style.border = '1px solid red';
             valid = false;
         } else {
-            inputs[0][i].style.border = '1px solid #ccc';
+            inputs[0][i].style.border = '1px solid #16ba4f';
         }
     }
     return valid;
