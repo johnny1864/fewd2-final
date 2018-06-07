@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
         luhnValidation();
     });
     
-    $('credit').addEventListener('keydown', function(){
+    $('credit').addEventListener('keyup', function(){
        cardType(); 
     });
 
@@ -42,10 +42,8 @@ function cardNumberValidate() {
         return false;
     } else {
         $('credit').style.border = '1px solid #16ba4f';
->>>>>>> 75dc6a457fb02391a240b614d228483d47a5040f
     }
     return true;
-
 }
 
 function dateValidate() {
@@ -55,9 +53,6 @@ function dateValidate() {
     var currentYear = currentDate.getFullYear();
     var currentMonth = currentDate.getMonth();
     var inputDate = $('ex-date').value;
-
-
-
 }
 
 function luhnValidation() {
@@ -101,13 +96,22 @@ function cardType(){
     
     var cardNumber = $('credit').value;
     
+    var firstTwoDigits = cardNumber.split('').slice(0, 2).join('');
+    
+    console.log(firstTwoDigits);
+    
     if(cardNumber[0] === '4'){
         $('type').innerText = 'Visa';
-    }else if(cardNumber[0] === '5'){
+    }else if(firstTwoDigits >= '51' && firstTwoDigits <= '55'){
         $('type').innerText = 'MasterCard';
     }else if(cardNumber[0] === '3'){
         $('type').innerText = 'American Express';
+    }else {
+        $('type').innerText = 'Invalid';
+        return false;
     }
+    
+    return true;
 }
 
 

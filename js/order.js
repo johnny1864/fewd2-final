@@ -106,7 +106,7 @@ function calcAmount() {
     amount = (+$('sizes').value) + (+$('cheese').value) + (+$('sauce').value) + getToppings();
     
     //console.log( 'the total is ' + amount);
-    $('amount').innerText = amount;
+    $('amount').innerText = amount.toFixed(2);
     
 }
 

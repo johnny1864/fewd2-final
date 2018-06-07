@@ -31,23 +31,23 @@ window.addEventListener('load', function () {
         $('my-modal').style.display = 'none';
     });
 
-
+    inputValidation();
     $('submit-address').addEventListener('click', function (e) {
     
         var inputs = document.querySelectorAll('#info-form');
         var address = getAddress(inputs);
         
-        console.log(address);
+        console.log(inputValidation());
         
-        if (!validation(inputs)) {
-            e.preventDefault();
-        } else {
+        if (inputValidation()) {
             var confirm = window.confirm('Your Adress is ' + address);
             if (confirm){
                 storeAddress(inputs);
             }else{
                 e.preventDefault();
             }  
+        } else {
+            e.preventDefault();
         }
     });
 });
@@ -75,6 +75,16 @@ function validation(inputs) {
         }
     }
     return valid;
+}
+
+//INPUT VALIDATION
+function inputValidation(){
+    'use strict';
+    var nameRegex = /[a-z]/gi;
+    var zipRegex = /^\d{5}$/g;
+    
+    //console.log(zipRegex.test($('inputZip').value));
+    return zipRegex.test($('inputZip').value);
 }
 
 //STORES ADDRESS TO LOCAL STORAGE
