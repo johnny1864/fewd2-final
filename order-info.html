@@ -27,7 +27,6 @@
                 <li id="state"> </li>
                 <li id="zip-code"> </li>
             </ul>
-            <a class="btn btn-info" href="#">Change</a>
         </div>
     </div>
 
@@ -140,36 +139,111 @@
             </div>
         </div>
 
+        <!-- BILLING CARD -->
         <div class="card bg-primary mb-3 order-card">
             <div class="card-header text-center text-secondary">Billing Information</div>
             <div class="card-body bg-secondary text-danger">
-                <h4 class="card-title">Billing Address</h4>
-                <form id='billing'>
-                    <div id="address-info">
-                        
-                    </div>
-                    
+                <div id="address-info">
+                    <form id="info-form">
+                       <h4 class="card-title">Card Information</h4>
+                        <fieldset>
+                            <input type="checkbox" id="same">
+                            <label for="same">Same As Delivery</label>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label for="inputName">Name*</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputAddress-type">Address Type*</label>
+                                    <select id="inputAddress-type" class="form-control">
+                                <option selected value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="business">Business</option>
+                                <option value="campus">Campus</option>
+                                <option value="hotel">Hotel</option>
+                                <option value="dorm">Dorm</option>
+                                <option value="other">Other</option>
+                              </select>
+                                </div>
+                                <div id="inputOther" class='col-md-6 offset-2'>
+                                    <label for="inputOther">Other</label>
+                                    <input id="other" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputAddress">Address*</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City*</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State*</label>
+                                    <input type="text" class="form-control" id="inputState">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip*</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                
+                <!-- CARD FORM -->
+                <form id="billing">
                     <h4 class="card-title">Card Information</h4>
                     <div id="card-info">
                         <div class="billing-item">
-                            <label for="credit">Credit Card Number <span id="cardNumber-error"> </span> <span id="type"> </span></label>
-                            <input type="text" id="credit" >
+                            <label for="credit">Credit Card Number <span class="error" id="cardNumber-error"> </span> <span id="type"> </span></label>
+                            <input type="text" id="credit">
+                        </div>
+
+                       <label for="ex-date">Expiration Date <span class="error" id="date-error"> </span></label>
+                        <div class="billing-item ex-date">
+                            <select class="col-6" name="month" id="ex-month">
+                                <option value="0">January</option>
+                                <option value="1">Febuary</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6">July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">October</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                            </select>
+                            
+                            
+                            <select class="col-6" name="year" id="ex-year">
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                            </select>
                         </div>
 
                         <div class="billing-item">
-                            <label for="ex-date">Expiration Date <span id="date-error"> </span></label>
-                            <input type="text" id="ex-date" placeholder="mm/yy">
-                        </div>
-
-                        <div class="billing-item">
-                            <label for="cvc-code">CVC Code <span id="date-error"> </span></label>
+                            <label for="cvc-code">CVC Code <span class="error" id="date-error"> </span></label>
                             <input type="text" id="cvc-code">
                         </div>
-                        <div class='text-center' >
+                        <div class='text-center'>
                             <a href="#" class='btn btn-danger' id='submit-order'>Place Order</a>
                         </div>
                     </div>
-                    
+
                 </form>
             </div>
         </div>

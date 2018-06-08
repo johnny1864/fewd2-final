@@ -1,9 +1,9 @@
 /**************
     LAYOUT
 **************/
-body{
-    overflow-x: hidden;
+#landing-page, #order-page{
     background: url('../images/vegetables-italian-pizza.jpg');
+    overflow-x: hidden;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +21,6 @@ ul li{
 }
 
 #content h1 {
-    width: 100%;
     font-size: 8em;
     opacity: 1;
     padding: 5px;
@@ -36,6 +35,18 @@ ul li{
 
 #content p a:hover{
     opacity: 0.8;
+}
+
+.error{
+    color: red;
+}
+
+.error-input{
+    border: 1px solid red;
+}
+
+.valid{
+    border: 1px solid green;
 }
 
 
@@ -90,6 +101,14 @@ ul li{
 /*********************
     ORDER-INFO PAGE
 *********************/
+.address ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.address li{
+    font-size: 1.5em;
+    padding-right: 5px;
+}
 #order-page{
     background-color: #ccc;
 }
@@ -166,6 +185,11 @@ input[type='radio']{
 .billing-item .row{
     margin: 0;
     margin-bottom: 1em;
+}
+
+.ex-date select{
+    display: flex;
+    display: inline
 }
 
 

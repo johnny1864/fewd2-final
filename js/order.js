@@ -50,15 +50,18 @@ window.addEventListener('load', function () {
         calcAmount(); 
         
         //ADDS EVENT LISTENER TO CUSTOMIZE CLASS
-        var orderItems = document.querySelectorAll('.customize');
-        
-        for (var i = 0; i<orderItems.length; i++){
-            
+        var orderItems = document.querySelectorAll('.customize');  
+        for (var i = 0; i<orderItems.length; i++){   
             orderItems[i].addEventListener('change', function(){
                 calcAmount();
-            });
-            
+            });      
         }
+        
+        //EVENT LISTENER FOR SAME AS ADDRESS CHECKBOX 
+        $('same').addEventListener('change', function(e){
+            console.log(e.target.checked);
+            addAddress(address, e.target.checked);
+        })
         
     }
 
@@ -95,6 +98,25 @@ function displayAddress(address) {
 
     if (address[3].length === 0) {
         $('other').style.display = 'none';
+    }
+}
+
+//ADDS ADDRESS TO BILLING ADDRESS 
+function addAddress(address, checked){
+    'use strict'; 
+    console.log(checked);
+    if(checked && address){
+        $('inputName').value = address[0];
+        $('inputAddress').value = address[4];
+        $('inputCity').value = address[5];
+        $('inputState').value = address[6];
+        $('inputZip').value = address[7];
+    }else{
+        $('inputName').value = '';
+        $('inputAddress').value = "";
+        $('inputCity').value = '';
+        $('inputState').value = '';
+        $('inputZip').value = '';
     }
 }
 
@@ -144,7 +166,7 @@ function setDropdown(crust){
     }
 }
 
-
+//RETURNS THE TOPPING CHECKBOXES ARE CHECKED
 function getToppings(){
     'use strict';
     
