@@ -1,12 +1,5 @@
 /*eslint-env browser*/
 
-//REGEX PATTERNS 
-//var regexPatterns = {
-//    inputName: /^[A-Za-z]$/g,
-//    inputPhone: /^\(\d{3}[)]\d{3}-\d{4}$|^\(\d{3}\)\s\d{3}-\d{4}$|^\d{10}$/,
-//    inputZip: /^\d{5}$/g,
-//    inputState: /^[a-z]{2}$/gi,
-//};
 
 //HELPER FUNCTION
 var $ = function (id) {
